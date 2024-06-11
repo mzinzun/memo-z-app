@@ -1,4 +1,3 @@
 node_modules/
-./api/node_modules/
-./ghi/node_modules/
 .env
+dist/
