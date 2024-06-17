@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Routes, BrowserRouter, Route } from 'react-router-dom';
 
 function Memos() {
     const [users, setUsers] = useState([]);

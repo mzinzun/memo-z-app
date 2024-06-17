@@ -1,6 +1,5 @@
 import React, {useEffect, useState}from 'react';
 import { Routes, BrowserRouter, Route } from 'react-router-dom';
-import axios from 'axios';
 import Memos from '../components/Memos';
 import './App.css';
 

@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2');
 const path = require('path');
+require('dotenv').config({ path: __dirname + '/../.env' });
+// require('dotenv').config();
 
 const port = process.env.PORT || 8000;
 const app = express();
@@ -13,9 +15,9 @@ app.use(cors());
 // coonect to mysql database
 const pool = mysql.createPool({
     host: 'localhost',
-    database: 'memo_app_db',
-    user: 'memo-app',
-    password: 'user94@memo_app_db',
+    database: process.env.DB_NAME,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
