@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, BrowserRouter, Route } from 'react-router-dom';
-import Memos from '../components/Memos';
+import { Routes, BrowserRouter, Route, Link } from 'react-router-dom';
+import Login from '../components/Login';
 import './App.css';
 
 function ComingSoon() {
 
     return (
-        <div className='coming-soon '>
-            <h1 className='bg-info display-1 '>Coming Soon!</h1>
-
+        <div className='coming-soon bg-info'>
+            <h1 className='bg-light display-1 '>Coming Soon!</h1>
             <p>Check back soon for updates!</p>
         </div>
     );
@@ -33,7 +32,7 @@ function App() {
                                     <a className='nav-link' href='/'>Home</a>
                                 </li>
                                 <li className='nav-item'>
-                                    <a className='nav-link' href='/memos'>Memos</a>
+                                    <Link className='nav-link' to='/login'>Login</Link>
                                 </li>
                             </ul>
                         </div>
@@ -43,9 +42,10 @@ function App() {
             <main>
                 <Routes>
                     <Route path="/" element={<ComingSoon />} />
+                    <Route path="/login" element={<Login />} />
                 </Routes>
             </main>
-            <footer className='px-4'>memo-z &copy; 2024</footer>
+            <footer className='px-4'>memo-z &copy;2024</footer>
         </div>
         </BrowserRouter>
     );
